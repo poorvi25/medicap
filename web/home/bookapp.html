@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>homepage</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		function openNav() {
+    document.getElementById("sinav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("sinav").style.width = "0";
+}
+</script>
+<style type="text/css">
+.booknow{
+  background-color :#000080;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: #000080;
+  width: 20em;  height: 5em;
+ font-size: large;
+}
+#mybutton {
+  position: relative;
+  bottom: -400px;
+  left: 500px;
+}	
+</style>
+</head>
+	 <body background="da.jpg">
+	 <header>    
+	     <nav>
+			<h1>MEDICAP</h1>
+			
+
+			<ul class="slide" >
+				<li class="log"><a href="..\login\mainlogin.html">ADMIN</a></li>
+				<li class="log">
+					<div class="dropdown">
+                    <button class="dropbtn">Sign-up
+                      <i class="fa fa-caret-down"></i>
+                      </button>
+                     <div class="dropdown-content">
+                      <a href="..\login\usersignup.html">USER</a>
+                      <a href="..\login\doctorsignup.html">DOCTOR</a>
+                      </div>
+                       </div>
+				</li>
+                <li class="log"><a href="..\login\mainlogin.html">login</a></li>
+				<span onclick="openNav()">
+				<svg width="30" height="30">
+	         		<path d="M0,5 30,5" stroke="#fff" stroke-width="2"/>
+	         		<path d="M0,14 30,14" stroke="#fff" stroke-width="2"/>
+	         		<path d="M0,23 30,23" stroke="#fff" stroke-width="2"/>
+	         	</svg>
+
+			</span>
+			</ul>
+              <div id="sinav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="#">faq</a>
+				<a href="aboutme.html">Aboutme</a>
+			</div>
+			
+			</nav>
+
+		</header>
+		</body>
+</html>
+
+		<!--button--!>
+<div id="mybutton">
+<button class="booknow">BOOK NOW</button>
+</div>
+
+</div>
+</div>
+		
+
+	
+  
+
+
+

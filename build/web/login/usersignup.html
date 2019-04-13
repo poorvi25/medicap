@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript">
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+};
+
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+};
+
+myInput.onkeyup = function() {
+ 
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) { 
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+}
+
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) { 
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) { 
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+  };
+</script>
+
+	<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,800');
+
+	body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+		body {
+			background-image: url("back.jpeg");
+
+		}
+		input,select,button{
+			width:80%;
+			padding: 10px 10px;
+			margin:8px 0;
+			display:inline-block;
+			border-radius:4px;
+			box-sizing: border-box;
+
+  }
+
+		
+		
+
+		
+		form{
+			margin-left: 20%;
+			
+			
+		}
+		div{
+			margin-left: 30%;
+			width:500px;
+			height:700px;
+			padding: 15px;
+			border-radius: 5px;
+			background-color: #fff;
+            box-shadow: 10px 10px 5px grey;
+		}
+	
+		input[type=radio],select{
+			width:5%;
+			margin:8px 0;
+			display:inline-block;
+			border-radius:4px;
+		}
+	
+		label{
+			display:block;
+			width: 30px;
+			color: black;
+       }
+		select{
+			width:80%;
+			padding: 10px 10px;
+			margin:8px 0;
+			display:inline-block;
+			border-radius:4px;
+			box-sizing: border-box;
+		}
+		button[type=submit],button[type=reset] {
+    color: black;
+    padding: 10px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 40%;
+    opacity: 0.9;
+
+}
+	button:hover {
+    opacity:1;
+}
+h2{
+	font-size: 25px;
+	color:white;
+}
+.main{
+	background-color: rgba(0,0,0,0.8); 
+}
+#message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "&#10004;";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "&#10006;";
+}
+	</style>
+</head>
+
+<body>
+	
+	
+<div class="main" >
+		<center><h2 style="font-family: 'Fira Sans', sans-serif;">Sign up here</h2></center>
+		<form action="" method="post" class="w3-container">
+			<input type="text" id="name" name="Name" placeholder="Enter your name" class="w3-input" required>
+
+		<input type="email" name="email" placeholder="abc@gmail.com" autocomplete="on" class="w3-input" required>
+
+		<input type="password" id="psw" name="Password" placeholder="Password"  class="w3-input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+			
+			<input type="password" id="psw" placeholder="Confirm Password"  class="w3-input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+		
+			<input type="tel" name="usertel" maxlength="10" placeholder="Enter mob. number" class="w3-input" required><br>
+			
+			<input type="radio" name="gender" value="male" checked>Male
+            <input type="radio" name="gender" value="female">Female
+            <input type="radio" name="gender" value="other">Other
+        
+            <input type="date" name="bday" placeholder="dd/mm/yyyy" class="w3-input" required>
+        
+            <input type="text" name="city" placeholder="enter your city" class="w3-input" required>
+          
+	    <select name="State" class="w3-input" required>
+		<option value="" disabled selected>State</option>
+		<option name="MP">Madhya Pradesh</option>
+		<option name="UP">Uttar Pradesh</option>
+		<option name="J&K">Jammu and kashmir</option>
+		<option name="Chattisgarh">Chattisgarh</option>
+		<option name="Maharastra">Maharasthra</option>
+		<option name="Goa">Goa</option>
+		<option name="Tamil Nadu">Tamil Nadu</option>
+		<option name="Gujrat">Gujrat</option>
+		<option name="Delhi">Delhi</option>
+		<option name="Kanarnatak">Kanarnatak</option>
+		<option name="Rajasthan">Rajasthan</option>
+		<option name="utrakhand">Utrakhand</option>
+	</select>
+	
+	<select name="Country" class="w3-input">
+		<option value="" disabled selected>Country</option>
+		<option name="India">India</option>
+         </select>
+
+      <button type="submit" class="signupbtn">Sign Up</button>
+      <button type="reset">Reset</button>
+ 
+</form>
+
+
+	</div>
+	 <div id="message">
+               <h3>Password must contain the following:</h3>
+               <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+               <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+               <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                        </div>
+	
+</body>
+</html>

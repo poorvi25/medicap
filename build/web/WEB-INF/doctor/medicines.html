@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>homepage</title>
+	<link rel="stylesheet" href="docstyle.css">
+	<script type="text/javascript">
+		function openNav() {
+    document.getElementById("sinav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("sinav").style.width = "0";
+}
+	</script>
+<style type="text/css">
+
+.search {
+  width: 100%;
+  position: relative;
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #000000;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #000000;
+}
+
+.searchButton {
+  position: absolute;  
+  right: -40px;
+  width: 80px;
+  height: 36px;
+  border: 1px solid #000000;
+  background: #000000;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body {
+	background-image: url("mainimg/2.jpeg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color: #cccccc;
+}	
+</style>
+
+</head>
+<body>
+		<header>
+			<nav>
+			<h1>MEDICAP</h1>
+			<ul id="navid">
+				
+			</ul>
+
+			<ul class="slide" >
+			<li class="log"><a href="..\login\mainlogin.html">ADMIN</a></li>
+				<li class="log">
+					<div class="dropdown">
+                    <button class="dropbtn">Sign-up
+                      <i class="fa fa-caret-down"></i>
+                      </button>
+                     <div class="dropdown-content">
+                 <a href="..\login\usersignup.html">USER</a>
+                      <a href="..\login\doctorsignup.html">DOCTOR</a>
+                      </div>
+                       </div>
+				</li>
+                <li class="log"><a href="..\login\mainlogin.html">log-in</a></li>
+					<span class="openbtn">
+			<span onclick="openNav()">
+				<svg width="30" height="30">
+	         		<path d="M0,5 30,5" stroke="#fff" stroke-width="2"/>
+	         		<path d="M0,14 30,14" stroke="#fff" stroke-width="2"/>
+	         		<path d="M0,23 30,23" stroke="#fff" stroke-width="2"/>
+	         	</svg>
+
+			</span>
+			</span>
+			</ul>
+              <div id="sinav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="#">faq</a>
+				<a href="aboutme.html">Aboutme</a>
+			</div>
+			</nav>
+	
+		</header>
+
+		<div class="divider"></div>
+ <div class="wrap">
+ 	<b><i>SEARCH FOR MEDICINES</i></b>
+   <div class="search">
+
+      <input type="text" class="searchTerm" placeholder="Medicine you are looking for?">
+
+      <button type="submit" class="searchButton">
+      	Search
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+</div>
+ 
+	</body>
+	</html>

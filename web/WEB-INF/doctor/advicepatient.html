@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doctor</title>
+	<link rel="stylesheet" href="docstyle.css">
+	<style type="text/css">
+	body{
+		background-image: url(mainimg/ex1.jpg);
+		image-rendering:-moz-crisp-edges; 
+		 
+		background-size: cover;
+	}
+#container {
+    width: 96%;
+    height: 100%;
+    
+    margin-top: 90px;
+        padding: 20px;
+    overflow:hidden;
+    
+}		
+
+#div1 {
+    width: 27%;
+    height: 95%;
+    float: right;
+    	padding: auto;
+      margin-right: 145px;
+
+}
+
+#div2 {
+    width: 27%;
+    height: 95%;
+    float: right;
+    	padding: auto;
+        margin-right: 265px;
+
+}
+.imgbox {
+	width: 96%;
+	float: left;
+	margin: 2%;
+border-radius: 15%;
+box-shadow: 4px 4px black;
+} 
+
+.middle {
+  transition: 1s ease;
+  opacity: 0;
+  position: absolute;
+margin:5%;  
+ 
+}
+
+#div1:hover .imgbox {
+  opacity: .8;
+}
+
+#div1:hover .middle {
+  opacity: 1;
+}
+
+#div2:hover .imgbox {
+  opacity: 0.8;
+}
+#div2:hover .middle {
+  opacity: 1;
+}
+.text {
+  background-color: #D05A5A;
+  color: #000;
+  font-size: 16px;
+  padding: 12px 16px;
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+}
+.title
+{
+  font-family: 'Playfair Display', serif;
+  font-size:30px;
+  margin-bottom: 20px;
+  padding: 6% 5% 0% 50%;
+  color:#FFFF00;
+
+}
+	</style>
+	<script type="text/javascript">
+		function openNav() {
+    document.getElementById("sinav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("sinav").style.width = "0";
+}
+	</script>
+	
+
+</head>
+	 <body>
+	 <header id="myHeader">   
+	
+	     <nav>
+			<h1>MEDICAP</h1>
+			<ul class="slide" >
+        
+        <li class="log"><a href="..\..\login\mainlogin.html">ADMIN</a></li>
+        <li class="log">
+          <div class="dropdown">
+                    <button class="dropbtn">Sign-up
+                      <i class="fa fa-caret-down"></i>
+                      </button>
+                     <div class="dropdown-content">
+                     <a href="..\..\login\usersignup.html">USER</a>
+                      <a href="..\..\login\doctorsignup.html">DOCTOR</a>
+                      </div>
+                       </div></li>
+                          <li class="log"><a href="..\..\login\mainlogin.html">log-in</a></li>
+			
+<span class="openbtn">
+			<span onclick="openNav()">
+				<svg width="30" height="30">
+	         		<path d="M0,5 30,5" stroke="#fff" stroke-width="2"/>
+	         		<path d="M0,14 30,14" stroke="#fff" stroke-width="2"/>
+	         		<path d="M0,23 30,23" stroke="#fff" stroke-width="2"/>
+	         	</svg>
+
+			</span>
+			</span>
+			</ul>
+              <div id="sinav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="notify">Notification</a>
+				<a href="#">faq</a>
+				<a href="aboutme.html">Aboutme</a>
+
+			</div>
+			
+			</nav>
+		</header>
+		<div class="divider"></div>
+
+		<div class="title">
+          <h1 class="name">ADVICE PATIENT</h1>
+        </div>
+
+
+		<div id="container">
+    <div id="div1">
+    	 <a href="#">
+     	<img class="imgbox" src="https://images.unsplash.com/photo-1518169709214-6d2fff4a8a4e?ixlib=rb-0.3.5&s=8e0294763ef6a9667d0197fdea955f7c&auto=format&fit=crop&w=750&q=80">
+     	  <div class="middle"><div class="text"><b>PENDING REQUEST</b></div></div>
+	</a>
+    </div>
+    <div id="div2">
+
+    	 <a href="#">
+          <img  class="imgbox" src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=899e2558d4cef07927641f0ecef4aa6c&auto=format&fit=crop&w=794&q=80
+">
+        <div class="middle"><div class="text"><b>ACCEPTED REQUEST</b></div></div>
+   		</a>
+    
+    </div>
+
+ 
+</body>
+</html>
